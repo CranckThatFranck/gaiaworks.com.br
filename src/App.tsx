@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ParticlesBackground } from './components/ui/ParticlesBackground';
 import { HeroSection } from './components/sections/HeroSection';
 import { MuseSection } from './components/sections/MuseSection';

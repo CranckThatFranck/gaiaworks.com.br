@@ -6,6 +6,8 @@ import { cn } from '../../utils/cn';
 export interface GlowingButtonProps extends ComponentProps<typeof motion.button> {
   href?: string;
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const GlowingButton = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, GlowingButtonProps>(
