@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { GlassCard } from '../ui/GlassCard';
 import { ShieldCheck, WifiOff, HeartHandshake, TrendingUp, Smartphone, Database, Globe, Cpu, CheckCircle } from 'lucide-react';
 
+import coverImg from '../../assets/negócio de bolso - logo (Capa para Facebook).jpg';
+
 export const MasterpieceSection: React.FC = () => {
   const differentials = [
     { icon: <Smartphone className="text-blue-400 w-6 h-6" />, title: "Inclusão Digital Real", desc: "Ultra leve. Funciona perfeitamente desde o Android 6." },
@@ -39,27 +41,16 @@ export const MasterpieceSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="inline-block mb-6"
         >
-          <img 
-            src="./src/img/icone_negociodebolso.png" 
-            alt="Ícone Negócio de Bolso" 
-            className="w-20 h-20 mx-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-          />
-        </motion.div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <h2 className="text-sm uppercase tracking-[0.3em] text-blue-400 font-semibold mb-4">A Obra-Prima</h2>
-          <img 
-            src="./src/img/negócio de bolso - logo.png" 
-            alt="Negócio de Bolso Logo" 
-            className="h-12 md:h-16 lg:h-20 mx-auto object-contain mb-8 filter brightness-200"
-          />
+          <h2 className="text-sm uppercase tracking-[0.3em] text-blue-400 font-semibold mb-8">A Obra-Prima</h2>
+          <div className="relative inline-block rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.3)] group">
+            <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            <img 
+              src={coverImg} 
+              alt="Capa Negócio de Bolso" 
+              className="w-full max-w-2xl mx-auto transform group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
+          </div>
         </motion.div>
       </div>
 
